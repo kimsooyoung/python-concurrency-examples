@@ -1,5 +1,7 @@
 # Code from tutorialedge.net
 # https://tutorialedge.net/python/concurrency/asyncio-event-loops-tutorial/
+#
+# Resource sharing btw event loops
 
 import asyncio
 
@@ -18,6 +20,7 @@ async def myCoroutine():
         await loop.run_in_executor(
             None, printGreeting, f"This is my coroutine {counter}"
         )
+
 
 async def mySecondCoroutine():
     global counter

@@ -1,5 +1,7 @@
 # Code from tutorialedge.net
 # https://tutorialedge.net/python/concurrency/asyncio-event-loops-tutorial/
+#
+# Mutex Lock
 
 import asyncio
 
@@ -37,16 +39,3 @@ except KeyboardInterrupt:
 finally:
     print("Closing Loop")
     loop.close()
-
-# Result
-#
-# $ python3 asyncio/example4.py
-# This is my coroutine
-# This is my Second coroutine
-# This is my coroutine
-# This is my Second coroutine
-# This is my coroutine
-# This is my Second coroutine
-# This is my coroutine
-# This is my Second coroutine
-# ...

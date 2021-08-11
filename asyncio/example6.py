@@ -1,5 +1,7 @@
 # Code from tutorialedge.net
 # https://tutorialedge.net/python/concurrency/asyncio-event-loops-tutorial/
+#
+# Infinite loop event loop
 
 import asyncio
 
