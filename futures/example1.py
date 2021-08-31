@@ -40,6 +40,7 @@ def main():
     start_tm = time.time()
     # 결과 건수
     # ProcessPoolExecutor
+    # with futures.ProcessPoolExecutor() as excutor:
     with futures.ThreadPoolExecutor() as excutor:
         # map -> 작업 순서 유지, 즉시 실행
         result = excutor.map(sum_generator, WORK_LIST)

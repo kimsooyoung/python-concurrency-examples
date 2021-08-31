@@ -30,7 +30,7 @@ from concurrent.futures import (
     as_completed,
 )
 
-WORK_LIST = [10000, 100000, 1000000, 10000000]
+WORK_LIST = [10000, 100000, 1000000, 100000000]
 
 
 # 동시성 합계 계산 메인 함수
@@ -62,16 +62,17 @@ def main():
             print("Scheduled for {} : {}".format(work, future))
             # print()
 
-        # wait 결과 출력
-        # result = wait(futures_list, timeout=7)
+        # # wait 결과 출력
+        # result = wait(futures_list, timeout=3)
         # # 성공
-        # print('Completed Tasks : ' + str(result.done))
+        # print("Completed Tasks : " + str(result.done))
         # # 실패
-        # print('Pending ones after waiting for 7seconds : ' + str(result.not_done))
+        # print("Pending ones after waiting for 7seconds : " + str(result.not_done))
         # # 결과 값 출력
         # print([future.result() for future in result.done])
 
         # as_completed 결과 출력
+        # 먼저 끝나는 것부터 결과 반환
         for future in as_completed(futures_list):
             result = future.result()
             done = future.done()
