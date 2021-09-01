@@ -41,3 +41,11 @@ producer_coro = produce(queue)
 consumer_coro = consume(queue)
 loop.run_until_complete(asyncio.gather(producer_coro, consumer_coro))
 loop.close()
+
+# producing 0
+# producing 1
+# consuming item 0...
+# producing 2
+# consuming item 1...
+# producing 3
+# consuming item 2...
